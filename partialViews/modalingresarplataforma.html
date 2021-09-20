@@ -1,0 +1,60 @@
+<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+  <div class="modal-content">
+    
+    <div class="modal-header bg-success text-white-50">
+      <h5 class="modal-title" id="exampleModalLabel">Ingresar a la plataforma</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="container-fluid">            
+        <!-- menú -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="ingresarTab" data-bs-toggle="pill" data-bs-target="#ingresaTab" type="button" role="tab" aria-controls="ingresaTab" aria-selected="true">Ingresar</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="registrarseTab" data-bs-toggle="pill" data-bs-target="#registrarseTab" type="button" role="tab" aria-controls="registrarseTab" aria-selected="false">Registrarse</button>
+          </li>              
+        </ul>
+        <!-- contenido de las tabs -->
+        <div class="tab-content" id="pills-tabContent">
+          <!-- ingresando  -->
+          <div class="tab-pane fade show active" id="ingresaTab" role="tabpanel" aria-labelledby="ingresarBtn">
+            <div class="form-floating mb-1">
+              <input type="text" class="form-control" id="usr" placeholder="Usuario" required>
+              <label for="usuario">Usuario</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+              <label for="pwd">Password</label>
+            </div><button type="button" class="btn btn-success" id="sendIngresar">Enviar datos</button>
+          </div>
+          <!-- registrándose -->
+          <div class="tab-pane fade" id="registrarseTab" role="tabpanel" aria-labelledby="registrarseBtn">
+            <div class="form-floating mb-1">
+              <input type="text" class="form-control" id="usrNuevo" placeholder="Usuario" required>
+              <label for="usrNuevo">Usuario</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="password" class="form-control" id="pwdNuevo" placeholder="Password" required>
+              <label for="pwdNuevo">Password</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input type="password" class="form-control" id="pwdNuevoRepite" placeholder="Repite password" required>
+              <label for="pwdNuevoRepite">Repite el password</label>
+            </div>
+            <button type="button" class="btn btn-success" id="sendRegistrarse">Enviar datos</button>
+          </div>
+        </div>
+
+      </div> <!-- fin container -->
+
+    </div> <!-- fin body -->
+
+    <div class="modal-footer">
+      <button id="cerrarModalIngresar" type="button" class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>          
+    </div>
+  </div>
+</div>

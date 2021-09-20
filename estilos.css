@@ -1,0 +1,108 @@
+/* evitar la rotación del celular */
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }  
+}
+/* imagenes en los celulares*/
+@media only screen and (max-width: 480px) {
+  .img-resp{
+    max-height: 100% !important;
+    overflow:hidden !important;
+    display: flex;
+    justify-content: center;
+  }    
+}
+/* imagenes mas grandes que los celulares */
+@media only screen and (min-width: 481px){
+  .img-resp{
+    min-width: 100%;
+    height: auto;    
+  }    
+}
+.card{
+  min-width: 13rem;
+  max-width: 19rem;
+  margin-bottom: 1rem;
+}
+/* títulos del slide */
+.carousel-caption{
+  top: 40% !important;
+  right: 0;
+  left: 0;
+  padding: 0;
+}
+/* texto con sombra en los slides del banner */
+.texto-sombra{
+  color:whitesmoke;
+  /* text-shadow: 0 0 0.2em rgb(191, 253, 195), 0 0 0.2em rgb(191, 253, 195),0 0 0.2em rgb(191, 253, 195); */
+  text-shadow: 1px 1px white, -1px -1px #333;
+  /* text-shadow: black 0.1em 0.1em 0.2em; */
+}
+/* sombra para las tarjetas */
+.sombra{
+  /* box-shadow: 0 0 0.2em rgb(200, 200, 200), 0 0 0.2em rgb(200, 200, 200),0 0 0.2em rgb(200, 200, 200); */
+  box-shadow: 0px 10px 10px rgb(93, 93, 93);
+}
+/* textos y backgrounds en el index */
+.titulo-servicios{
+  color:rgb(9, 175, 51);
+}
+.seccion-servicios{
+  background-color: rgb(109, 255, 128);
+  padding: 1.5rem;
+}
+.articulo-servicios{
+  background-color: rgb(192, 241, 200);  
+}
+.titulo-noticias{
+  color:rgb(248, 160, 59);
+}
+.seccion-noticias{
+  background-color: rgb(250, 177, 94);
+  padding: 1.5rem;
+}
+.articulo-noticias{
+  background-color: rgb(247, 192, 129);  
+}
+.titulo-team{
+  color:rgb(246, 111, 57);
+}
+.seccion-team{
+  background-color: rgb(248, 145, 104);
+  padding: 1.5rem;
+}
+.articulo-team{
+  background-color: rgb(243, 180, 156);  
+}
+/* titulos de los tabs en las ventanas modales */
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #198754 !important
+}
+.nav-link{
+  color: #198754;
+}
+/* body animado */
+.body_animado, div_animado {
+  animation-duration: 1.5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both; 
+}
+.transicion--fadein {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
