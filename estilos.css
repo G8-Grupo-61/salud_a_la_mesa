@@ -26,9 +26,18 @@
     height: auto;    
   }    
 }
+
+
 .card{
   min-width: 13rem;
   max-width: 19rem;
+  margin-bottom: 1rem;
+}
+
+.noticias-card{
+  min-width: 12rem;
+  max-width: 100%;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 /* títulos del slide */
@@ -64,6 +73,15 @@
 .titulo-noticias{
   color:rgb(248, 160, 59);
 }
+
+
+.noticias-titulo{
+  color: black;  
+}
+
+.noticias-main{
+  margin-top: 30px;
+}
 .seccion-noticias{
   background-color: rgb(250, 177, 94);
   padding: 1.5rem;
@@ -71,6 +89,13 @@
 .articulo-noticias{
   background-color: rgb(247, 192, 129);  
 }
+
+.noticias-articulo{
+  font-size:medium;
+}
+
+
+
 .titulo-team{
   color:rgb(246, 111, 57);
 }
