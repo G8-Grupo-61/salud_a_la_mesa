@@ -26,86 +26,26 @@
   </header>
 
   <div id="app">
-    <!-- Prueba textos -->
-    <h2 class="container titulo-servicios">
-      {{secciones.seccion_prim}}
-    </h2>
-    <section class="primeros_pasos">
-      <div class="container seccion-servicios">
-        <div class="row">
-          <!-- Paso 1 -->
-          <div v-for="(item,index) in prim_pasos" class="row align-items-center justify-content-center py-2 my-1 mx-1" :class="{'flex-row-reverse': item.flex}">
-            <div class="col-12 col-lg-6">
-              <img class="img-fluid w-100" :src="item.img" alt="imagen">
-            </div>
-            <div class="col-12 col-lg-6">
-              <p class="">
-                {{item.texto}}
-              <ul class="">
-                <li v-for="elemento in item.lista">{{elemento.item}}</li>
-              </ul>
-              </p>
-            </div>
-          </div>          
-        </div>
-      </div>
-    </section>
 
-    <section class="mantenimiento_cuidado">
-      <h2 class="container titulo-noticias">
-        {{secciones.seccion_mant}}
-      </h2>
-      
-      <div class="container seccion-noticias">
-        <div class="row">
-          <div class="row">
-            
-            <div v-for="contenido in mantenimiento" class="col-12 col-md-6 align-items-center justify-content-center">
-              <div class="icono-cuidado">
-                <img class="" :src="contenido.img">
-              </div>
+    <tarjeta-general
+      titulo = "prueba titulo"
+      imagen = "img/location.jpg"
+      texto = "Probando la imagen d eprueba"
+    ></tarjeta-general>
 
-              <div class="info-cuidado">
-                <p class="titulo-cuidado">{{contenido.titulo}}</p>
-                <p>{{contenido.texto}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <primeros-pasos
+      v-bind:titulo="secciones.seccion_prim"
+    ></primeros-pasos>
 
-    </section>
+    <mantenimiento-huerta
+      v-bind:titulo="secciones.seccion_mant"
+    ></mantenimiento-huerta>
 
-
-    <section>
-      <h2 class="container titulo-team text-center mt-3">
-        {{secciones.seccion_prod}}
-      </h2>
-      <div class="container mb-3">
-
-        <div class="row">
-          <div v-for="(imagen,index) in productos" id="carouselExampleIndicators" class="carousel slide col-12 col-sm-4 offset-sm-4"
-            data-bs-ride="carousel">
-            <div class="carousel-inner align-items-center justify-content-center">
-              <div class="carousel-item active">
-                <img :src="imagen.img" class="d-block w-100" alt="...">
-              </div>              
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <productos-huerta
+      v-bind:titulo="secciones.seccion_prod"
+    >
+    <!-- Intentar crear un carousel con vuetify -->
+    </productos-huerta>
 
   </div>
 
@@ -122,11 +62,16 @@
   
   <!-- Elementos de Vue -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="vue_huerta.js" async defer></script>
   
   
-  <script src="vue.js" async defer></script>
+  <script src="./components/productosHuerta.js"></script>
+  <script src="./components/pasosHuerta.js"></script>
+  <script src="./components//mantenimientoHuerta.js"></script>
+  <script src="./components/cuadroInformativo.js"></script>
+
+  <script src="vue_huerta.js"></script>  
   <script src="app.js" async defer></script>
+  
 
 </body>
 
